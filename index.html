@@ -1,12 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PromptNova</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PromptNova</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#0d1117;
+color:white;
+}
+
+header{
+background:#6c2bd9;
+padding:20px;
+text-align:center;
+font-size:30px;
+font-weight:bold;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.hero p{
+color:#cccccc;
+font-size:18px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+background:#ff0066;
+color:white;
+padding:14px 28px;
+border-radius:10px;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#d60055;
+}
+</style>
 </head>
+
 <body>
-  <h1>Welcome to PromptNova</h1>
-  <p>My AI Prompt Website is Live!</p>
+
+<header>
+🔥 PromptNova
+</header>
+
+<section class="hero">
+<h1>Free AI Prompts</h1>
+<p>Discover the best ChatGPT, Midjourney and AI prompts.</p>
+
+<a class="btn" href="#">Explore Prompts</a>
+</section> <section style="padding:20px;">
+
+<div style="background:#1c1f26;padding:20px;border-radius:15px;margin-bottom:20px;">
+<img src="https://picsum.photos/600/300" style="width:100%;border-radius:10px;">
+<h2 style="margin-top:15px;">🎬 Cinematic Portrait Prompt</h2>
+<p style="color:#bbb;margin:10px 0;">
+Create an ultra realistic cinematic portrait with dramatic lighting, DSLR quality, 8K details and professional color grading.
+</p>
+<button style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
+❤️ Copy Prompt
+</button>
+</div>
+
+<div style="background:#1c1f26;padding:20px;border-radius:15px;margin-bottom:20px;">
+<img src="https://picsum.photos/601/300" style="width:100%;border-radius:10px;">
+<h2 style="margin-top:15px;">🌿 Nature Prompt</h2>
+<p style="color:#bbb;margin:10px 0;">
+Beautiful green forest with waterfalls, cinematic lighting, ultra realistic, 8K HDR.
+</p>
+<button style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
+❤️ Copy Prompt
+</button>
+</div>
+
+<div style="background:#1c1f26;padding:20px;border-radius:15px;">
+<img src="https://picsum.photos/602/300" style="width:100%;border-radius:10px;">
+<h2 style="margin-top:15px;">🚗 Luxury Car Prompt</h2>
+<p style="color:#bbb;margin:10px 0;">
+A futuristic luxury sports car on a neon cyberpunk street at night, ultra realistic, 8K.
+</p>
+<button style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
+❤️ Copy Prompt
+</button>
+</div>
+
+</section> <footer style="background:#161b22;padding:30px;text-align:center;margin-top:40px;">
+<h3>🚀 PromptNova</h3>
+<p style="color:#aaa;">
+The best free AI Prompt Library for ChatGPT, Midjourney and more.
+</p>
+
+<p style="margin-top:15px;color:#777;">
+© 2026 PromptNova. All Rights Reserved.
+</p>
+</footer>
+
+<script>
+const buttons=document.querySelectorAll("button");
+
+buttons.forEach(button=>{
+button.addEventListener("click",function(){
+const prompt=this.parentElement.querySelector("p").innerText;
+navigator.clipboard.writeText(prompt);
+this.innerHTML="✅ Copied!";
+setTimeout(()=>{
+this.innerHTML="❤️ Copy Prompt";
+},2000);
+});
+});
+</script>
+
 </body>
 </html>
