@@ -110,6 +110,7 @@ Create an ultra realistic cinematic portrait with dramatic lighting, DSLR qualit
 <button style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
 ❤️ Copy Prompt
 </button>
+ <button class="like-btn">👍 Like <span>0</span></button>
 </div>
 
 <div style="background:#1c1f26;padding:20px;border-radius:15px;margin-bottom:20px;">
@@ -121,6 +122,7 @@ Beautiful green forest with waterfalls, cinematic lighting, ultra realistic, 8K 
 <button style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
 ❤️ Copy Prompt
 </button>
+ <button class="like-btn">👍 Like <span>0</span></button>
 </div>
 
 <div style="background:#1c1f26;padding:20px;border-radius:15px;">
@@ -132,6 +134,7 @@ A futuristic luxury sports car on a neon cyberpunk street at night, ultra realis
 <button style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
 ❤️ Copy Prompt
 </button>
+ <button class="like-btn">👍 Like <span>0</span></button>
 </div>
 
 </section> <footer style="background:#161b22;padding:30px;text-align:center;margin-top:40px;">
@@ -147,6 +150,16 @@ The best free AI Prompt Library for ChatGPT, Midjourney and more.
 
 <script>
 const buttons=document.querySelectorAll("button");
+ const likeButtons = document.querySelectorAll(".like-btn");
+
+likeButtons.forEach(button => {
+  let count = 0;
+
+  button.addEventListener("click", function () {
+    count++;
+    this.innerHTML = "👍 Like " + count;
+  });
+});
 
 buttons.forEach(button=>{
 button.addEventListener("click",function(){
