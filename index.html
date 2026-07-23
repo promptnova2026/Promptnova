@@ -107,7 +107,7 @@ style="width:100%;padding:14px;border:none;border-radius:10px;font-size:16px;mar
 <p style="color:#bbb;margin:10px 0;">
 Create an ultra realistic cinematic portrait with dramatic lighting, DSLR quality, 8K details and professional color grading.
 </p>
-<button style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
+<button class="copy-btn" style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
 ❤️ Copy Prompt
 </button>
  <button class="like-btn">👍 Like <span>0</span></button>
@@ -119,7 +119,7 @@ Create an ultra realistic cinematic portrait with dramatic lighting, DSLR qualit
 <p style="color:#bbb;margin:10px 0;">
 Beautiful green forest with waterfalls, cinematic lighting, ultra realistic, 8K HDR.
 </p>
-<button style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
+<button class="copy-btn" style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
 ❤️ Copy Prompt
 </button>
  <button class="like-btn">👍 Like <span>0</span></button>
@@ -131,7 +131,7 @@ Beautiful green forest with waterfalls, cinematic lighting, ultra realistic, 8K 
 <p style="color:#bbb;margin:10px 0;">
 A futuristic luxury sports car on a neon cyberpunk street at night, ultra realistic, 8K.
 </p>
-<button style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
+<button class="copy-btn" style="background:#ff0066;color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;">
 ❤️ Copy Prompt
 </button>
  <button class="like-btn">👍 Like <span>0</span></button>
@@ -149,8 +149,8 @@ The best free AI Prompt Library for ChatGPT, Midjourney and more.
 </footer>
 
 <script>
-const buttons=document.querySelectorAll("button");
- const likeButtons = document.querySelectorAll(".like-btn");
+const copyButtons = document.querySelectorAll(".copy-btn");
+const likeButtons = document.querySelectorAll(".like-btn");
 
 likeButtons.forEach(button => {
   let count = 0;
@@ -161,7 +161,7 @@ likeButtons.forEach(button => {
   });
 });
 
-buttons.forEach(button=>{
+copyButtons.forEach(button=>{
 button.addEventListener("click",function(){
 const prompt=this.parentElement.querySelector("p").innerText;
 navigator.clipboard.writeText(prompt);
