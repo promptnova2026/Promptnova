@@ -175,6 +175,7 @@ style="width:100%;padding:14px;border:none;border-radius:10px;font-size:16px;mar
   </button>
 </div>
 
+});
 </section> <footer style="background:#161b22;padding:30px;text-align:center;margin-top:40px;">
 <h3>🚀 PromptNova</h3>
 <p style="color:#aaa;">
@@ -187,6 +188,7 @@ The best free AI Prompt Library for ChatGPT, Midjourney and more.
 </footer>
 
 <script>
+ 
 const copyButtons = document.querySelectorAll(".copy-btn");
 const likeButtons = document.querySelectorAll(".like-btn");
 
@@ -209,9 +211,30 @@ this.innerHTML="❤️ Copy Prompt";
 },2000);
 });
 });
- const searchBox = document.getElementById("searchBox");
-const cards = document.querySelectorAll(".prompt-card");
+ const searchBox = 
+ document.getElementById("searchBox");
+const cards =
+document.querySelectorAll(".prompt-card");
+const categoryButtons = 
+document.querySelectorAll(".btn");
 
+categoryButtons.forEach(button => {
+  button.addEventListener("click", function () {
+    const category = this.dataset.category;
+
+    cards.forEach(card => {
+      if (
+        category === "all" ||
+        category === "trending" ||
+        card.dataset.category === category
+      ) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
 searchBox.addEventListener("keyup", function () {
   const text = this.value.toLowerCase();
 
