@@ -299,6 +299,19 @@ searchBox.addEventListener("keyup", function () {
     }
   });
 });
+ const images = {
+  portrait: "https://picsum.photos/600/300?random=1",
+  nature: "https://picsum.photos/600/300?random=2",
+  aiart: "https://picsum.photos/600/300?random=3",
+  couple: "https://picsum.photos/600/300?random=4",
+  sports: "https://picsum.photos/600/300?random=5"
+};
+
+document.querySelectorAll(".prompt-card img").forEach(img => {
+  img.addEventListener("click", function () {
+    window.open(this.src, "_blank");
+  });
+});
 </script>
 
 </body>
